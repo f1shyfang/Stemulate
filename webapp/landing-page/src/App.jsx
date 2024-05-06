@@ -1,7 +1,21 @@
-export default function App() {
+import React from 'react';
+import { Hero, Navbar,Companies, Courses, Achievement, Categories, Feedback, CTA, Footer } from './components';
+import './App.css'
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div>
+      <Navbar />
+      <Hero />
+      <Companies/>
+      <Courses />
+      <Achievement />
+      <Categories />
+      <Feedback />
+      <CTA />
+      <Footer />
+    </div>
   )
 }
+
+export default App
