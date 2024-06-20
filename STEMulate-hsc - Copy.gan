@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="STEMulate-HSC" company="m.f" webLink="https://github.com/f1shyfang/python-STEMulate-HSC" view-date="2023-11-05" view-index="0" gantt-divider-location="635" resource-divider-location="300" version="3.2.3247" locale="en_AU">
+    <description>
+        <![CDATA[A web-based HSC study tool designed to assist students in preparing for their Higher School Certificate exams. The tool will focus on core functionalities like web scraping of past papers, data analysis, spaced repetition flashcards, and user progress tracking]]>
+    </description>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Name" width="353" order="0"/>
+        <field id="tpd4" name="Begin date" width="132" order="1"/>
+        <field id="tpd5" name="End date" width="134" order="2"/>
+        <option id="taskLabelLeft" value="resources"/>
+        <option id="filter.completedTasks" value="false"/>
+        <timeline>
+            <![CDATA[0]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#33ff33 #ffff00 #ff3399 #f4f4f4 #6666ff #66ffff #99ffff]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="none">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Week 1 (December 11-17): Planning &amp; Proposal Refining - Market research &amp; competitor analysi" color="#8cb6ce" meeting="false" start="2023-12-11" duration="7" complete="0" thirdDate="2024-01-12" thirdDate-constraint="0" expand="true"/>
+        <task id="1" name="Week 2 (December 18-24): Planning &amp; Proposal Refining - Define target audience &amp; user needs" color="#8cb6ce" meeting="false" start="2023-12-18" duration="7" complete="0" thirdDate="2023-12-08" thirdDate-constraint="0" expand="true"/>
+        <task id="2" name="Week 3 (December 25-31): Planning &amp; Proposal Refining - Refine project scope &amp; functionalities, Create detailed storyboards &amp; user flows" color="#8cb6ce" meeting="false" start="2023-12-25" duration="7" complete="0" thirdDate="2023-12-20" thirdDate-constraint="0" expand="true"/>
+        <task id="3" name="Week 4 (January 1-7): Planning &amp; Proposal Refining - Develop high-level system architecture" color="#8cb6ce" meeting="false" start="2024-01-01" duration="7" complete="0" thirdDate="2023-12-20" thirdDate-constraint="0" expand="true">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="6" name="Milestone: Proposal completion by April 1 (Week 5)" color="#8cb6ce" meeting="true" start="2024-04-01" duration="0" complete="0" thirdDate="2023-12-20" thirdDate-constraint="0" expand="true"/>
+        <task id="8" name="Week 5 (January 8-14): Web Scraping - Design web scraping API" color="#99ffff" meeting="false" start="2024-01-08" duration="7" complete="0" thirdDate="2024-02-26" thirdDate-constraint="0" expand="true"/>
+        <task id="9" name="Week 6 (January 15-21): Web Scraping - Develop web scraping infrastructure" color="#66ffff" meeting="false" start="2024-01-15" duration="7" complete="0" thirdDate="2024-02-26" thirdDate-constraint="0" expand="true"/>
+        <task id="10" name="Week 7 (January 22-28): Web Scraping - Implement scraping for HSC Syllabus website" color="#66ffff" meeting="false" start="2024-01-22" duration="7" complete="0" thirdDate="2024-02-19" thirdDate-constraint="0" expand="true"/>
+        <task id="11" name="Week 8 (January 29 - February 4): Web Scraping - Implement scraping for NESA website, Data cleaning &amp; validation, Integrate scraped data with database" color="#66ffff" meeting="false" start="2024-01-29" duration="7" complete="0" thirdDate="2024-04-15" thirdDate-constraint="0" expand="true">
+            <depend id="14" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="13" name="Module: Web Scraping" color="#66ffff" meeting="true" start="2024-02-01" duration="0" complete="0" thirdDate="2024-01-29" thirdDate-constraint="0" expand="true"/>
+        <task id="14" name="Week 9 (February 5-11): Data Processing &amp; Machine Learning - Design data processing pipeline" color="#6666ff" meeting="false" start="2024-02-05" duration="7" complete="0" thirdDate="2024-01-29" thirdDate-constraint="0" expand="true"/>
+        <task id="15" name="Week 10 (February 12-18): Data Processing &amp; Machine Learning - Develop text conversion &amp; formatting procedures" color="#6666ff" meeting="false" start="2024-02-12" duration="7" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true"/>
+        <task id="16" name="Week 11 (February 19-25): Data Processing &amp; Machine Learning - Design machine learning algorithm for difficulty scoring" color="#6666ff" meeting="false" start="2024-02-19" duration="7" complete="0" thirdDate="2024-04-23" thirdDate-constraint="0" expand="true"/>
+        <task id="17" name="Week 12 (February 26 - March 4): Data Processing &amp; Machine Learning - Implement &amp; train machine learning model" color="#6666ff" meeting="false" start="2024-02-26" duration="8" complete="0" thirdDate="2024-04-23" thirdDate-constraint="0" expand="true">
+            <depend id="20" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="19" name="Module: Data Processing &amp; Machine Learning" color="#8cb6ce" meeting="true" start="2024-03-04" duration="0" complete="0" thirdDate="2024-05-13" thirdDate-constraint="0" expand="true"/>
+        <task id="20" name="Week 13 (March 5-11): Question Presentation &amp; User Interaction - Design question selection algorithm" color="#ff3399" meeting="false" start="2024-03-05" duration="7" complete="0" thirdDate="2024-05-13" thirdDate-constraint="0" expand="true"/>
+        <task id="21" name="Week 14 (March 12-18): Question Presentation &amp; User Interaction - Develop user interface for question presentation" color="#ff3399" meeting="false" start="2024-03-12" duration="7" complete="0" thirdDate="2024-05-13" thirdDate-constraint="0" expand="true"/>
+        <task id="22" name="Week 15 (March 19-25): Question Presentation &amp; User Interaction - Design user interaction elements, Implement user interaction features" color="#ff3399" meeting="false" start="2024-03-19" duration="7" complete="0" thirdDate="2024-05-13" thirdDate-constraint="0" expand="true"/>
+        <task id="23" name="Week 16 (March 26 - April 1): Question Presentation &amp; User Interaction - Integrate with question database &amp; difficulty scoring" color="#ff3399" meeting="false" start="2024-03-26" duration="7" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true">
+            <depend id="24" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="24" name="Week 17 (April 2-8): Performance Tracking &amp; Overall System Integration - Design performance tracking metrics &amp; feedback system" color="#ffff00" meeting="false" start="2024-04-02" duration="7" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true"/>
+        <task id="25" name="Week 18 (April 9-15): Performance Tracking &amp; Overall System Integration - Develop performance tracking data storage &amp; analysis, Integrate performance tracking with user interaction &amp; database" color="#ffff00" meeting="false" start="2024-04-09" duration="7" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="29" name="Module: Performance Tracking &amp; Overall System Integration" color="#8cb6ce" meeting="true" start="2024-04-10" duration="0" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true"/>
+        <task id="26" name="Week 19 (April 16-22): Final Testing &amp; Bug Fixing - Conduct thorough system testing &amp; bug fixing" color="#33ff33" meeting="false" start="2024-04-16" duration="7" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true"/>
+        <task id="27" name="Week 20 (April 23-29): Final Testing &amp; Bug Fixing - Complete testing, address remaining issues, prepare for delivery" color="#33ff33" meeting="false" start="2024-04-23" duration="7" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true"/>
+        <task id="32" name="Week 21 (April 30 - May 6): Final Testing &amp; Bug Fixing (Phase 3) - Finalize testing, resolve remaining bugs, prepare for launch" color="#33ff33" meeting="false" start="2024-04-30" duration="7" complete="0" thirdDate="2024-01-01" thirdDate-constraint="0" expand="true"/>
+        <task id="31" name="Module: Testing &amp; Bug Fixing" color="#8cb6ce" meeting="true" start="2024-04-29" duration="0" complete="0" thirdDate="2024-04-29" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
