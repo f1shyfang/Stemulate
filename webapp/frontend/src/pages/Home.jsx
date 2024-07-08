@@ -3,6 +3,132 @@ import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
 
+
+
+
+
+
+
+function parseCsv(text) {
+    const rows = text.split("\n").map((row) => row.split(","));
+    const dataById = {};
+    rows.forEach((row) => {
+      const [parentText, parentFilename, ...data] = row; // Split parent ID
+      const parentId = `${parentText}-${parentFilename}`; // Combine text and filename
+      if (!dataById[parentId]) {
+        dataById[parentId] = [];
+      }
+      dataById[parentId].push({ data }); // Assuming data is an array of other fields
+    });
+    return dataById;
+  }
+  
+
+function Home() {
+  const [dataById, setDataById] = useState({});
+  const [selectedParentId, setSelectedParentId] = useState(null);
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
+  const [currentRowData, setCurrentRowData] = useState(null);
+
+  useEffect(() => {
+    const readFile = async (e) => {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const text = event.target.result;
+        const parsedData = parseCsv(text);
+        setDataById(parsedData);
+      };
+      reader.readAsText(file);
+    };
+
+    // Trigger file reading on component mount (optional)
+    readFile();
+  }, []);
+
+  const handleParentSelect = (parentId) => {
+    setSelectedParentId(parentId);
+    setCurrentGroupIndex(0);
+    setCurrentRowData(null);
+  };
+
+  const handleNextGroup = () => {
+    if (selectedParentId) {
+      const childRows = dataById[selectedParentId] || [];
+      const nextIndex = Math.min(currentGroupIndex + 1, childRows.length - 1);
+      setCurrentGroupIndex(nextInt);
+    }
+  };
+
+  const handlePreviousGroup = () => {
+    if (selectedParentId) {
+      setCurrentGroupIndex(Math.max(currentGroupIndex - 1, 0));
+    }
+  };
+
+  const handleChildSelect = (childRow) => {
+    setCurrentRowData(childRow);
+  };
+
+  const renderCurrentGroup = () => {
+    if (!selectedParentId) return <p>Select a parent row.</p>;
+    const childRows = dataById[selectedParentId] || [];
+    if (!childRows.length) return <p>No child rows for this parent.</p>;
+
+    const currentRow = childRows[currentGroupIndex];
+    // Display content of the current row based on your data structure (currentRow.data)
+    return (
+      <div key={currentRow.id}> {/* Replace with actual ID field */}
+        {/* Display data fields from currentRow.data */}
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <input type="file" accept=".csv" onChange={(e) => readFile(e)} />
+      <select
+        value={selectedParentId}
+        onChange={(e) => handleParentSelect(e.target.value)}
+      >
+        <option value="">Select Parent</option>
+        {Object.keys(dataById).map((parentId) => (
+          <option key={parentId} value={parentId}>
+            Parent ID: {parentId}
+          </option>
+        ))}
+      </select>
+      <button onClick={handlePreviousGroup} disabled={!selectedParentId}>
+        Previous Group
+      </button>
+      <button onClick={handleNextGroup} disabled={!selectedParentId}>
+        Next Group
+      </button>
+      {renderCurrentGroup()}
+      {currentRowData && (
+        <div>
+          {/* Optionally display details of the selected child row (currentRowData) */}
+          <option key={parentId} value={parentId}>
+            Parent ID: {parentId}  {/* Display full parent ID */}
+            </option>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Home;
+
+
+
+
+
+
+/*
+
+
+
+
 function Home() {
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
@@ -83,3 +209,5 @@ function Home() {
 }
 
 export default Home;
+
+*/
