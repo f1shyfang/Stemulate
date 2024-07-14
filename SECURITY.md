@@ -6,9 +6,9 @@ The following projects and versions are currently supported with security update
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 3.1.x   | :white_check_mark: |
-| 2.0.x   | :x:                |
-| 1.0.x   | :x:                | 
+| 0.1.x   | :white_check_mark: |
+| 0.0.3   | :x:                |
+| 0.0.2   | :x:                | 
 | < 0.1   | :x:                |
 
 ## Reporting a Vulnerability
