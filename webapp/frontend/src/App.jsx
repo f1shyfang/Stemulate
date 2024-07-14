@@ -6,6 +6,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Home from "./pages/Home"
 import Start from "./pages/Start"
+import Card from "./pages/Card"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
 
@@ -33,6 +34,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/Card" element={<Card />} />
         <Route path="/Start" element={<Start />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
