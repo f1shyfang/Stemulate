@@ -1,34 +1,20 @@
 import React, { useState, useEffect } from "react";
 
 function parseCsv(text) {
-  // Implement your logic to parse the CSV data into an object structure
-  // This example assumes a simple structure with "parentID" and other data fields
   const rows = text.split("\n").map((row) => row.split(","));
   const dataById = {};
   rows.forEach((row) => {
-    const [parentID, ...data] = row;
-    if (!dataById[parentID]) {
-      dataById[parentID] = [];
+    const [parentText, parentFilename, ...data] = row; // Split parent ID
+    const parentId = `${parentText}-${parentFilename}`; // Combine text and filename
+    if (!dataById[parentId]) {
+      dataById[parentId] = [];
     }
-    dataById[parentID].push({ data }); // Assuming data is an array of other fields
+    dataById[parentId].push({ data }); // Assuming data is an array of other fields
   });
   return dataById;
 }
 
-/*
-const readFile = async (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const text = event.target.result;
-      const parsedData = parseCsv(text);
-      setDataById(parsedData);
-      const flashcards = convertToFlashcards(parsedData[selectedParentId] || []);
-      setFlashcards(flashcards);
-    };
-    reader.readAsText(file);
-  };
-*/
+
 
 function Card() {
     const [dataById, setDataById] = useState({});
@@ -121,7 +107,7 @@ function Card() {
     if (!reviewFlashcards.length) {
         return <p>No flashcards to display.</p>;
       }
-    // Flashcard display and user interaction logic (needs implementation)
+    // Flashcard display and user interaction logic 
     return (
       <div>
         <h2>Data for Parent: {selectedParentId}</h2>
@@ -151,7 +137,7 @@ function Card() {
       </div>
     );
     
-    // You can customize the rendering logic here to display the data in a desired format (e.g., table, list)
+    // rendering logic format? (e.g., table, list)
     return (
       <div>
         <h2>Data for Parent: {selectedParentId}</h2>
