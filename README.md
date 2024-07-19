@@ -43,7 +43,13 @@ There are several ways to use the Webapp
 10. npm install
 11. npm run dev
 
-  
++ Url Paths for pages
+- /Login
+- /Register
+- /Home
+- /Start
+- /Card
+
 
 + Install the Webapp and run from a Container/Vm (Not working)
 + Join a hosted server (Not working)
